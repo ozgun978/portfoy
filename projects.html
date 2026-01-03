@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="./">
+  <title data-i18n="title_projects">Projeler - Özgün Aksade</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --primary:#4f46e5; --primary-foreground:#fff; --background:#f9fafb; --foreground:#111827; --muted:#6b7280; --border:#d1d5db; --card:#fff; }
+    :root[data-theme="dark"] { --background:#0f172a; --foreground:#f3f4f6; --muted:#9ca3af; --border:#334155; --card:#1e293b; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:var(--background);color:var(--foreground)}
+    a{color:inherit;text-decoration:none}
+    /* Smooth theme transitions */
+    @media (prefers-reduced-motion: no-preference) {
+      *, *::before, *::after {
+        transition: background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease, fill .25s ease, stroke .25s ease;
+      }
+      .theme-fade { animation: themeFade .24s ease; }
+      @keyframes themeFade { from { opacity:.9; } to { opacity:1; } }
+    }
+    nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(249,250,251,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    :root[data-theme="dark"] nav{background:rgba(15,23,42,.65)}
+    nav .container{max-width:1100px;margin:0 auto;padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:700;font-size:1.25rem;color:var(--primary);cursor:pointer}
+    .menu{display:flex;gap:1rem;align-items:center;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;padding-bottom:.25rem}
+    .menu > *{flex:0 0 auto}
+    .menu a{padding:.4rem .8rem;border-radius:.5rem;color:var(--muted)}
+    .menu a:hover{background:rgba(79,70,229,.1);color:var(--primary)}
+    .menu a.active{background:rgba(79,70,229,.12);color:var(--primary);font-weight:600}
+    #themeToggle{background:none;border:none;font-size:1.1rem;cursor:pointer;margin-left:.5rem;color:var(--foreground)}
+    #langToggle{background:none;border:1px solid var(--border);padding:.25rem .5rem;border-radius:.5rem;font-size:.9rem;cursor:pointer;color:var(--foreground)}
+    main{max-width:1100px;margin:5rem auto 2rem;padding:0 1.5rem 80px}
+    footer{position:fixed;bottom:0;left:0;right:0;height:50px;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--foreground);background:rgba(79,70,229,.15);backdrop-filter:blur(6px);border-top:1px solid var(--border);z-index:999;transition:none!important;padding:0 2rem}
+    .social-links{display:flex;gap:1.5rem;align-items:center}
+    .social-links a{color:var(--foreground);font-size:1.2rem;opacity:0.8;transition:opacity 0.3s, transform 0.3s}
+    .social-links a:hover{opacity:1;transform:translateY(-2px)}
+    .footer-text{flex:1;text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:12px}
+    .card{background:var(--card);color:var(--foreground);border-radius:.75rem;box-shadow:0 6px 20px rgba(0,0,0,.08);overflow:hidden}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="./index.html" class="logo" id="logo"><img src="https://st.depositphotos.com/42522772/53622/v/450/depositphotos_536222236-stock-illustration-initial-letter-logo-design-logo.jpg" alt="Özgün Aksade Logo" style="height:34px;display:block;background:var(--background);border-radius:6px;padding:2px;" /></a>
+      <div class="menu">
+        <a href="./index.html" data-i18n="nav_home">Ana Sayfa</a>
+        <a href="./about.html" data-i18n="nav_about">Hakkımda</a>
+        <a href="./education.html" data-i18n="nav_education">Eğitim</a>
+        <a href="./experience.html" data-i18n="nav_experience">Deneyim</a>
+        <a href="./projects.html" class="active" data-i18n="nav_projects">Projeler</a>
+        <a href="./contact.html" data-i18n="nav_contact">İletişim</a>
+        <button id="langToggle" title="Dil">TR</button>
+        <button id="themeToggle" title="Tema">🌙</button>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <h2 data-i18n="projects_heading">Projeler</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://img.piri.net/mnresize/712/-/piri/upload/3/2025/1/28/183983d0-h6l5t1h7g5fx0kjw2956mc.jpeg" alt="Rafa Silva web sitesi" style="width:100%;height:160px;object-fit:cover;">
+        <div class="content" style="padding:1rem;">
+          <h3 data-i18n="proj1_title">Rafa Silva web sitesi</h3>
+          <p style="color:var(--muted);margin:6px 0 10px;" data-i18n="proj1_desc">Rafa Silva kişisinin verileri ve hayatı.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKynvxxEIJdeF3MgNtiDrSLWxlyWeAovt_Pw&s" alt="Yemek Sipariş Web Sitesi" style="width:100%;height:160px;object-fit:cover;">
+        <div class="content" style="padding:1rem;">
+          <h3 data-i18n="proj2_title">Yemek Sipariş Web Sitesi</h3>
+          <p style="color:var(--muted);margin:6px 0 10px;" data-i18n="proj2_desc">Amatör seviye yemek sipariş edilen site.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://st.depositphotos.com/42522772/53622/v/450/depositphotos_536222236-stock-illustration-initial-letter-logo-design-logo.jpg" alt="Bu Web Sitesi" style="width:100%;height:160px;object-fit:cover;">
+        <div class="content" style="padding:1rem;">
+          <h3 data-i18n="proj3_title">Bu Web Sitesi</h3>
+          <p style="color:var(--muted);margin:6px 0 10px;" data-i18n="proj3_desc">Özgün Aksade kişisine ait web sitesi.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/özgün-aksade-636a79396" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/settings/profile" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/ozgunaksade" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="tel:+905425536548" title="Telefon"><i class="fas fa-phone"></i></a>
+      <a href="mailto:aksade1912ozgun@gmail.com?subject=İletişim&body=Merhaba Özgün," title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="footer-text">
+      <p data-i18n="footer"> 2026 Portföy. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+  <script>
+    const themeToggle=document.getElementById('themeToggle');const root=document.documentElement;function update(){const c=root.getAttribute('data-theme')||'light';themeToggle.textContent=c==='light'?'🌙':'☀️'};themeToggle.addEventListener('click',()=>{document.body.classList.add('theme-fade');const c=root.getAttribute('data-theme')||'light';const n=c==='light'?'dark':'light';root.setAttribute('data-theme',n);localStorage.setItem('siteTheme',n);update();setTimeout(()=>document.body.classList.remove('theme-fade'),320)});const s=localStorage.getItem('siteTheme');if(s){root.setAttribute('data-theme',s)}update();
+
+    const i18n = {
+      tr: {
+        title_projects: "Projeler - Özgün Aksade",
+        nav_home: "Ana Sayfa",
+        nav_about: "Hakkımda",
+        nav_education: "Eğitim",
+        nav_experience: "Deneyim",
+        nav_projects: "Projeler",
+        nav_contact: "İletişim",
+        projects_heading: "Projeler",
+        proj1_title: "Rafa Silva web sitesi",
+        proj1_desc: "Rafa Silva kişisinin verileri ve hayatı.",
+        proj2_title: "Yemek Sipariş Web Sitesi",
+        proj2_desc: "Amatör seviye yemek sipariş edilen site.",
+        proj3_title: "Bu Web Sitesi",
+        proj3_desc: "Özgün Aksade kişisine ait web sitesi.",
+        footer: "© 2026 Portföy. Tüm hakları saklıdır."
+      },
+      en: {
+        title_projects: "Projects - Özgün Aksade",
+        nav_home: "Home",
+        nav_about: "About",
+        nav_education: "Education",
+        nav_experience: "Experience",
+        nav_projects: "Projects",
+        nav_contact: "Contact",
+        projects_heading: "Projects",
+        proj1_title: "Rafa Silva website",
+        proj1_desc: "Data and biography of Rafa Silva.",
+        proj2_title: "Food Ordering Website",
+        proj2_desc: "An amateur-level site for ordering food.",
+        proj3_title: "This Website",
+        proj3_desc: "Personal website of Özgün Aksade.",
+        footer: "© 2026 Portfolio. All rights reserved."
+      }
+    };
+
+    const langToggle = document.getElementById('langToggle');
+    function applyLang(lang){
+      document.documentElement.setAttribute('lang', lang);
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(i18n[lang] && i18n[lang][key]){
+          if(el.tagName.toLowerCase()==='title'){ document.title = i18n[lang][key]; }
+          else { el.textContent = i18n[lang][key]; }
+        }
+      });
+      localStorage.setItem('siteLang', lang);
+      if(langToggle){ langToggle.textContent = lang.toUpperCase(); }
+    }
+    const savedLang = localStorage.getItem('siteLang') || 'tr';
+    applyLang(savedLang);
+    if(langToggle){
+      langToggle.addEventListener('click', ()=>{
+        const next = (localStorage.getItem('siteLang')||'tr') === 'tr' ? 'en' : 'tr';
+        applyLang(next);
+      });
+    }
+  </script>
+</body>
+</html>
